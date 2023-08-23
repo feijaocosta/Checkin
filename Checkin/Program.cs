@@ -1,3 +1,4 @@
+using Microsoft.Extensions.DependencyInjection;
 using Checkin.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<CheckinContext>(
-	options => options.UseNpgsql(builder.Configuration.GetConnectionString("BibliotecaContext"))
+	options => options.UseNpgsql(builder.Configuration.GetConnectionString("CheckinContext") ?? throw new InvalidOperationException("Connection string 'CheckinContext' not found."))
 );
 
 var app = builder.Build();

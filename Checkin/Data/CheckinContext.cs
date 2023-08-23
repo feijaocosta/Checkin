@@ -1,4 +1,8 @@
-﻿using Checkin.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Checkin.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Checkin.Data
