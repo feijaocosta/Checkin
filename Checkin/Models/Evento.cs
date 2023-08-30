@@ -12,7 +12,7 @@ namespace Checkin.Models
         [Display(Name ="Nome do Evento")]
         public string? Name { get; set; }
 
-        public Owner Owner { get; set; }
+        public Owner? Owner { get; set; }
 
     }
 }
